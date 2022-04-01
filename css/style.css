@@ -26,16 +26,44 @@ nav {
     font-size: 1.2rem;
 }
 
-#location-icone {
+#location-icon {
     height: 20px;  
 }
 
 /* Hero Section */
 .today-date {
     text-transform: capitalize;
-    font-family: 'sculpin';
+    font-family: sculpin;
     font-style: normal;
     font-weight: 400;
     font-size: 0.8rem;
-    margin-left: 39px;
+    margin-left: 40px;
+}
+
+/* Forecast */
+.weather-forecast {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 20%;
+    transform: translateY(-20%);
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#weather-icon {
+    width: 170px;
+}
+
+.weather-info {
+    font-family: sculpin;
+    letter-spacing: 0.05em;
+    font-size: 1em;
+}
+
+.celsius {
+    font-family: sculpin;
+    font-size: 2.5em;
+    padding-top: 10px;
 }
