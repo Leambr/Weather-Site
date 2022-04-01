@@ -1,0 +1,41 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Navbar */
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 10px 5px 10px;
+}
+
+.location {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 0.5em;
+    align-items: center;
+}
+
+.location h1 {
+    font-family: cartograph-cf, monospace;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 1.2rem;
+}
+
+#location-icone {
+    height: 20px;  
+}
+
+/* Hero Section */
+.today-date {
+    text-transform: capitalize;
+    font-family: 'sculpin';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 0.8rem;
+    margin-left: 39px;
+}
