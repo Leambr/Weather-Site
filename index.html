@@ -1,43 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Météo Paris</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://use.typekit.net/ozf6zpa.css">
-</head>
-<body>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="https://use.typekit.net/ozf6zpa.css" />
+  </head>
+  <body>
     <div class="container">
-        <!-- Navbar -->
-        <nav>
-            <div class="location">
-                <img src="icones/map-pin.svg" alt="location" id="location-icon">
-                <h1>Paris</h1>
-            </div>
-            <div class="menu">
-                <img src="icones/list.svg" alt="menu" id="menu-icon">
-            </div>
-        </nav>
-
-        <!-- Hero section -->
-        <div class="hero-section">
-            <!-- Date -->
-            <h2 class="today-date"></h2>
-            <!-- Forecast -->
-            <div class="weather-forecast">
-                <img src="icones/animated/rainy-1.svg" alt="sun and rain" id="weather-icon">
-                <p class="weather-info">
-                    Pluies éparses
-                </p>
-                <p class="celsius">
-                    18 °
-                </p>
-            </div>
+      <!-- Navbar -->
+      <nav>
+        <div class="location">
+          <!-- Données de l'api -->
+          <img src="icones/map-pin.svg" alt="location" id="location-icon" />
+          <!-- Données de l'api -->
+          <h1 class="location-api">Paris</h1>
         </div>
+        <div class="menu">
+          <img src="icones/list.svg" alt="menu" id="menu-icon" />
+        </div>
+      </nav>
+
+      <!-- Hero section -->
+      <div class="hero-section">
+        <!-- Date -->
+        <h2 class="today-date"></h2>
+        <!-- Forecast -->
+        <div class="weather-forecast">
+          <img
+            src="icones/animated/rainy-1.svg"
+            alt="sun and rain"
+            id="weather-icon"
+          />
+          <!-- Données de l'api -->
+          <p class="weather-info">Pluies éparses</p>
+          <!-- Données de l'api -->
+          <p class="temperature">18 °</p>
+        </div>
+      </div>
+      <!-- Afficher les détails de la météo -->
+      <div class="weather-details">
+        <div class="hour-day-week">
+          <p>Heure</p>
+          <p>Jour</p>
+          <p>Semaine</p>
+        </div>
+        <div class="day-forecast">
+          <div class="info"></div>
+          <div class="info"></div>
+          <div class="info"></div>
+          <div class="info"></div>
+          <div class="info"></div>
+          <div class="info"></div>
+          <div class="info"></div>
+        </div>
+      </div>
     </div>
 
     <script src="js/app.js"></script>
-</body>
+  </body>
 </html>

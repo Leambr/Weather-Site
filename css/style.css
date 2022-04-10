@@ -3,8 +3,13 @@
     padding: 0;
     box-sizing: border-box;
 }
-/* Navbar */
 
+.container {
+    /* background: url(../img/Paris.svg) no-repeat center; */
+    background-size: cover;
+    height: 100vh;
+}
+/* Navbar */
 nav {
     display: flex;
     justify-content: space-between;
@@ -20,7 +25,7 @@ nav {
 }
 
 .location h1 {
-    font-family: cartograph-cf, monospace;
+    font-family: 'cartograph-cf', monospace;
     font-weight: 700;
     font-style: normal;
     font-size: 1.2rem;
@@ -33,7 +38,7 @@ nav {
 /* Hero Section */
 .today-date {
     text-transform: capitalize;
-    font-family: sculpin;
+    font-family: 'sculpin';
     font-style: normal;
     font-weight: 400;
     font-size: 0.8rem;
@@ -57,13 +62,46 @@ nav {
 }
 
 .weather-info {
-    font-family: sculpin;
+    font-family: 'sculpin';
     letter-spacing: 0.05em;
     font-size: 1em;
 }
 
-.celsius {
-    font-family: sculpin;
+.temperature {
+    font-family: 'sculpin';
     font-size: 2.5em;
     padding-top: 10px;
+}
+
+/* Afficher les détails de la météo */
+.weather-details {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hour-day-week {
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+    position: absolute;
+    top: 55%;
+    font-family: 'cartograph-cf', monospace;
+    letter-spacing: 0.05em;
+    font-size: 0.8em;
+}
+
+.day-forecast {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    position: absolute;
+    top: 60%;
+}
+.info {
+    border: 1px solid;
+    height: 50px;
+    width: 50px;
+
 }
