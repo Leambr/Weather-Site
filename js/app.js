@@ -39,14 +39,3 @@ function launchAPI(long, lat) {
         console.log(data);
     })
 }
-
-// async function launchAPI() {
-//     const response = await fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${long}&exclude=minutely&units=metric&lang=fr&appid=${APIkey}`);
-
-//     const data = response.json(); 
-//     return data;
-// }
-
-// launchAPI.then(data => {
-//     data;
-// })
