@@ -13,6 +13,15 @@ dateDisplay.textContent = today.toLocaleDateString(undefined, options);
 const APIkey = '4e2e3dab2a81db680154c7f46987a90f';
 let APIresults;
 
+const weatherIcon = document.querySelector('#weather-icon');
+const weatherIconForecast = document.querySelectorAll('.weather-icon-forecast')
+const weather = document.querySelector('.weather-info');
+const temperature = document.querySelector('.temperature');
+const currentLocation = document.querySelector('.location-api');
+const hour = document.querySelectorAll('.hour-name-forecast');
+const hourlyTemperature = document.querySelectorAll('.hour-forecast-value');
+
+
 // Vérifier si le navigateur a la géolocalisation
 if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(position => {
@@ -36,6 +45,41 @@ function launchAPI(long, lat) {
     })
     // 
     .then((data) => {
-        console.log(data);
+        APIresults = data;
+        console.log(APIresults);
+
+        weather.innerText = APIresults.current.weather[0].description;
+        temperature.innerText = Math.trunc(APIresults.current.temp) + "°";
+        currentLocation.innerText = APIresults.timezone;
+
+        // Les heures par tranche de trois avec leurs températures
+        let currentHour = new Date().getHours();
+
+        for(let i = 0; i < hour.length; i++) {
+            let hourAdded = currentHour -1 + i*3;
+
+            if(hourAdded > 24) {
+                hour[i].innerText = (hourAdded - 24) + "h"
+            } else if(hourAdded === 24) {
+                hour[i].innerText = "00h"
+            } else {
+                hour[i].innerText = hourAdded + "h"
+            }
+        }
+
+        // Température par tranche de trois heures
+        for(let j = 0; j < hourlyTemperature.length; j++) {
+            hourlyTemperature[j].innerText = Math.trunc(APIresults.hourly[j *3].temp) + "°";
+            weatherIconForecast[j].src = `icones/animated/${APIresults.hourly[j*3].weather[0].icon}.svg`
+
+        }
+        
+
+
+        // Icone principal dynamique
+        weatherIcon.src = `icones/animated/${APIresults.current.weather[0].icon}.svg`
+
+        
+            
     })
 }
