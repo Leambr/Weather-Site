@@ -1,3 +1,5 @@
+import APIkey from "./apikey.js"
+
 const dateDisplay = document.querySelector('.today-date');
 
 // Afficher la date du jour
@@ -10,7 +12,6 @@ console.log(today.toLocaleDateString(undefined, options));
 dateDisplay.textContent = today.toLocaleDateString(undefined, options);
 
 // API
-const APIkey = '4e2e3dab2a81db680154c7f46987a90f';
 let APIresults;
 
 const weatherIcon = document.querySelector('#weather-icon');
